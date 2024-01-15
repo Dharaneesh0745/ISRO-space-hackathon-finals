@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Population Data</h1>
+    <div id="apiData"></div>
+    <script>
+      const apiUrl =
+        "https://gist.githubusercontent.com/karmadude/4527959/raw/59492893c2f13ffb909ba48253fa7fa30a640c56/in-population.json";
+      const fetchData = async () => {
+        try {
+          const response = await fetch(apiUrl);
+          const data = await response.json();
+          displayData(data);
+        } catch (error) {
+          console.error("Error fetching data:", error);
+        }
+      };
+      const displayData = (data) => {
+        const apiDataElement = document.getElementById("apiData");
+        apiDataElement.innerHTML = JSON.stringify(data, null, 2);
+      };
+      window.onload = fetchData;
+    </script>
+  </body>
+</html>
