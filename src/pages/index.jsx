@@ -1,4 +1,5 @@
 /* eslint-disable quotes */
+export { default as Bhuvan } from "./Bhuvan";
 export { default as Dashboard } from "./Dashboard";
 export { default as Kanban } from "./Kanban";
 export { default as Orders } from "./Orders";
