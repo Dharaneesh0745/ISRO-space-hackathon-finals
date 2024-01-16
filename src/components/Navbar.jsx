@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable quotes */
 import React, { useEffect } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
