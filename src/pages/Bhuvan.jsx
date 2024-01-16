@@ -1,13 +1,11 @@
 /* eslint-disable quotes */
 import React, { useEffect } from "react";
-// eslint-disable-next-line import/no-duplicates
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { FiSettings } from "react-icons/fi";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 
-import { Navbar, Footer, Sidebar, ThemeSettings } from "./components";
+import { Navbar, Footer, Sidebar, ThemeSettings } from "../components";
 import {
-  // Bhuvan,
   Dashboard,
   Orders,
   Calendar,
@@ -24,15 +22,12 @@ import {
   ColorPicker,
   ColorMapping,
   Editor,
-} from "./pages";
-import "./App.css";
+} from "./index";
+import "../App.css";
 
-// import Bhuvan from "./pages/Bhuvan";
-// import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import { useStateContext } from "../contexts/ContextProvider";
 
-import { useStateContext } from "./contexts/ContextProvider";
-
-const App = () => {
+const Bhuvan = () => {
   const {
     setCurrentColor,
     setCurrentMode,
@@ -122,14 +117,7 @@ const App = () => {
         </div>
       </BrowserRouter>
     </div>
-    // <Routes>
-    //   <Route path="/bhuvan" component={Bhuvan} />
-
-    // </Routes>
-    // <div>
-    //   <a href="http://localhost:3000/bhuvan">Click</a>
-    // </div>
   );
 };
 
-export default App;
+export default Bhuvan;
